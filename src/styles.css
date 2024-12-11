@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     padding: 0;
+    margin: 0 20em;
 }
 
 header {
@@ -18,18 +18,15 @@ main {
 
 section {
     float: left;
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 1em;
 }
 
 section article {
     background-color: #f9f9f9;
-    padding: 1em;
+    padding-right: 1em;
     margin: 0.5em;
-    width: 50%;
-}
-
-section article {
+    padding: 0.1em;
     width: 100%;
 }
 
@@ -39,17 +36,12 @@ section article:nth-child(odd) {
 
 section article:nth-child(1) {
     float: left;
-    width: 50%;
+    width: 60%;
     background-color: #f9f9f9;
-}
-
-section article:last-child {
-    clear: both;
 }
 
 img {
     width: 100%;
-    height: auto;
 }
 
 footer {
@@ -63,17 +55,59 @@ footer {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 1em 1.5em;
-    display: inline-block;
+    padding: 1em 1em;
 }
 
 nav a:hover {
-    background-color: #555;
+    text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+
+    body {
+        margin: 0 16em;
+    }
+
+    section article {
+        width: 100%;
+    }
+
+    section article:nth-child(1) {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    body {
+        margin: 0 2em;
+    }
+
+    section article {
+        width: 100%;
+    }
+
+    section article:nth-child(1) {
+        width: 60%;
+    }
 }
 
 @media (max-width: 768px) {
+
+    body {
+        margin: 0.5em;
+    }
+
     main, aside {
-        float: none;
+        width: 100%;
+    }
+
+    section article {
+        clear: both;
+        width: 100%;
+    }
+
+    section article:nth-child(1) {
         width: 100%;
     }
 }
